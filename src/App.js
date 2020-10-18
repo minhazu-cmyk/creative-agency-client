@@ -11,7 +11,9 @@ import LogIn from './Component/LogIn/LogIn';
 import NotFound from './Component/NotFound/NotFound';
 import OrderList from './Component/OrderList/OrderList';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import ServiceList from './Component/ServiceList/ServiceList';
 import { useState } from 'react';
+import OrderReview from './Component/OrderReview/OrderReview';
 
 export const userContext = createContext();
 
@@ -27,7 +29,12 @@ function App() {
         <Route path='/login'>
           <LogIn></LogIn>
         </Route>
-        
+            <Route path='/service'>
+         <ServiceList/>
+        </Route>
+        <Route path='/review'>
+         <OrderReview></OrderReview>
+        </Route>
         <PrivateRoute path='/order'>
           <OrderList></OrderList>
         </PrivateRoute>

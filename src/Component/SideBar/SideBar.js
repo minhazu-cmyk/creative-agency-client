@@ -17,12 +17,12 @@ const SideBar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className="text-white">
+                    <Link to="/service" className="text-white">
                         <FontAwesomeIcon icon={faLock} /> <span>service list</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className="text-white">
+                    <Link to="/review" className="text-white">
                         <FontAwesomeIcon icon={faKeyboard} /> <span>review</span>
                     </Link>
                 </li>

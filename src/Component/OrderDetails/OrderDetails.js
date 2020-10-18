@@ -1,13 +1,16 @@
 import React from 'react';
 import { useContext } from 'react';
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router-dom';
 import { userContext } from '../../App';
 
 const OrderDetails = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const [logInUser,setLogInUser] = useContext(userContext);
-    const onSubmit = data => {
 
+    const history = useHistory();
+    const onSubmit = data => {
+           history.push("/service")
         fetch('http://localhost:5000/addOrder',{
             method:"POST",
              headers: {"content-type":"application/json"},
@@ -26,8 +29,8 @@ const OrderDetails = () => {
        <input name="email" defaultValue={logInUser.email}  ref={register({ required: true })} placeholder="your email address" />
        {errors.email && <span className="error" >email field is required</span>}
        <br/> <br/>
-       <input name="course name" defaultValue=""  ref={register({ required: true })} placeholder="Graphic design" />
-       {errors.text && <span className="error" >this field is required</span>}
+       <input name="course" defaultValue=""  ref={register({ required: true })} placeholder="Course name" />
+       {errors.courseName && <span className="error" >this field is required</span>}
        <br/><br/>
        <input style={{width:"200px",height:"100px"}} name="text" defaultValue=""  ref={register({ required: true })} placeholder="project details" />
        {errors.text && <span className="error" >this field is required</span>}
