@@ -7,7 +7,7 @@ const ServiceDetails = () => {
     const [logInUser,setLogInUser] = useContext(userContext);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/order?email="+logInUser.email)
+        fetch("https://secure-dusk-25023.herokuapp.com/order?email="+logInUser.email)
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[])

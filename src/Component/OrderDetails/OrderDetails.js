@@ -11,7 +11,7 @@ const OrderDetails = () => {
     const history = useHistory();
     const onSubmit = data => {
            history.push("/service")
-        fetch('http://localhost:5000/addOrder',{
+        fetch('https://secure-dusk-25023.herokuapp.com/addOrder',{
             method:"POST",
              headers: {"content-type":"application/json"},
              body:JSON.stringify(data)    
