@@ -22,13 +22,14 @@ client dashboard
 
 
 Front-end Thechnology :
-React.js
-Bootstrap4
-CSS3
-Back-end Technology
-Node.js
-Express.js
-MongoDB
+React.js,
+Bootstrap4,
+CSS3,
+
+Back-end Technology:
+Node.js,
+Express.js,
+MongoDB,
 
 
 
